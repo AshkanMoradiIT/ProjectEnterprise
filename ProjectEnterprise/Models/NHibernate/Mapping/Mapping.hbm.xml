@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping" assembly="ProjectEnterprise" namespace="ProjectEnterprise.Models.Entities">
+
+	<class name="CompanySubject">
+		<id name="Id" column="Id">
+			<generator class="native" />
+		</id>
+		<property name="Name" column="Name" />
+		<property name="LatinName" column="LatinName" />
+		<property name="Address" column="Address" />
+	</class>
+
+	<class name="EnterpriseSubject">
+		<id name="Id" column="Id">
+			<generator class="native" />
+		</id>
+		<property name="Code" column="Code" />
+		<property name="Name" column="Name" />
+		<property name="SubjectType" column="SubjectType" />
+	</class>
+
+	<class name="Material">
+		<id name="Id" column="Id">
+			<generator class="native" />
+		</id>
+		<property name="Name" column="Name" />
+		<property name="Weight" column="Weight" />
+		<property name="Color" column="Color" />
+		<property name="UnitOfMeasureName" column="UnitOfMeasureName" />
+	</class>
+
+	<class name="PersonSubject">
+		<id name="Id" column="Id">
+			<generator class="native" />
+		</id>
+		<property name="FirstName" column="FirstName" />
+		<property name="LastName" column="LastName" />
+		<property name="PhoneNumber" column="PhoneNumber" />
+	</class>
+</hibernate-mapping>

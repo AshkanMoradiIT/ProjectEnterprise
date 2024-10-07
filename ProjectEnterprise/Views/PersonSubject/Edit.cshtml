@@ -1,0 +1,30 @@
+﻿@model ProjectEnterprise.Models.Entities.PersonSubject
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+
+<h2>Edit Person</h2>
+
+@using (Html.BeginForm("Edit", "PersonSubject", method: FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(m => m.Id)
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LastName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PhoneNumber)
+        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.PhoneNumber)
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+}
